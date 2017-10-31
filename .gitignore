@@ -10,3 +10,4 @@
 /rust/target/
 /go/algorithms/
 /go/stemwords/algorithms.go
+node_modules/

@@ -1,0 +1,1 @@
+emcc emscripten/snowball_en.c runtime/api.c runtime/utilities.c libstemmer/libstemmer.c src_c/stem_ISO_8859_1_english.c src_c/stem_UTF_8_english.c  --post-js emscripten/snowball.js --memory-init-file 0 -o emscripten/build/snowball_en.js -s MODULARIZE=1 -s EXPORT_NAME="'Snowball'" -O3

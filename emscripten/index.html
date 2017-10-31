@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Snowball stemmer demo</title>
+    <style>
+      body {
+        font-family: arial;
+        margin: 0;
+        padding: none;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.17/webcomponents-loader.js"></script>
+    <script type="text/javascript" src="./build/snowball_en.js"></script>
+    <base href="http://polygit.org/components/">
+    <link href="polymer/polymer.html" rel="import">
+    <link href="polymer/lib/elements/dom-bind.html" rel="import">
+    <link href="paper-input/paper-input.html" rel="import">
+    <style>
+      .center {
+        margin-top: 50vh;
+        font-size: 20px;
+      }
+      paper-input {
+        width: 250px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+<body>
+<center>
+<dom-bind>
+  <template>
+    <div class="center">
+      <paper-input label="Whitespace separated words" value="{{value}}" on-value-changed="_onValueChanged"></paper-input>
+      >
+      <paper-input readonly label="Snowball stemmed words" value="[[stemmed]]"></paper-input>
+    </div>
+  </template>
+</dom-bind>
+</center>
+<script>
+Snowball();
+var demo = document.querySelector('dom-bind');
+demo._onValueChanged = function(e, details) {
+  this.stemmed = ElasticMeow.stemmer.snowball(details.value)
+};
+
+</script>
+</body>
+</html>

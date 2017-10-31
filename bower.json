@@ -1,0 +1,39 @@
+{
+  "name": "elastic-meow-stemmer-snowball",
+  "description": "An emscripten export of snowball stemmer.",
+  "main": "emscripten/build/snowball_en.js",
+  "authors": [
+    "eterna2 <eterna2@hotmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "emscripten",
+    "asm",
+    "stemmer",
+    "stem",
+    "porter",
+    "snowball",
+    "text",
+    "text-processing",
+    "nlp"
+  ],
+  "homepage": "https://github.com/e2fyi/snowball",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "algorithms",
+    "compiler",
+    "doc",
+    "examples",
+    "go",
+    "include",
+    "java",
+    "jsx",
+    "python",
+    "runtime",
+    "rust"
+  ]
+}
