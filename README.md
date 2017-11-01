@@ -3,6 +3,8 @@ ElasticMeow.stemmer.snowball
 
 This is a fork of the [original snowball repo](https://github.com/snowballstem/snowball) where the snowball stemmer (english only) is compiled into [Javascript asm](http://asmjs.org/) with [Emscripten](https://github.com/kripken/emscripten) for use in the browser.
 
+You can see a demo at [https://e2fyi.github.io/snowball/](https://e2fyi.github.io/snowball/).
+  
 ## Bower
 For purely front-end work, you can use bower to get the js file.
 ```
