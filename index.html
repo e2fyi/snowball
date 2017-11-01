@@ -19,12 +19,15 @@
     <link href="paper-input/paper-input.html" rel="import">
     <style>
       .center {
-        margin-top: 50vh;
+        margin-top: calc(50vh - 20px);
         font-size: 20px;
       }
       paper-input {
         width: 250px;
         display: inline-block;
+      }
+      .small {
+        font-size: 0.7em;
       }
     </style>
   </head>
@@ -34,10 +37,12 @@
 <dom-bind>
   <template>
     <div class="center">
+      <h2>Emscripten port of the Snowball stemmer</h2>
       <paper-input label="Whitespace separated words" value="{{value}}" on-value-changed="_onValueChanged"></paper-input>
       >
       <paper-input readonly label="Snowball stemmed words" value="[[stemmed]]"></paper-input>
     </div>
+    <div class="small">Powered by <a href="https://github.com/e2fyi/snowball">ElasticMeow.stemmer.snowball</a></div>
   </template>
 </dom-bind>
 </center>
